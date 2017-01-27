@@ -5,39 +5,32 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
-# Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
-# Use Puma as the app server
 gem 'puma', '~> 3.0'
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'font-awesome-sass', '~> 4.7'
+gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'simple_form', '~> 3.3', '>= 3.3.1'
+gem 'rails-i18n', '~> 5.0.0.beta1'
+gem 'will_paginate', '~> 3.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'factory_girl_rails', '~> 4.8'
+  gem 'faker', '~> 1.7', '>= 1.7.2'
+  gem 'pry-rails', '~> 0.3.4'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'simplecov', '~> 0.13.0', require: false
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1', require: false
 end
 
 group :development do
@@ -47,6 +40,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Capistrano to upload application
+  gem 'capistrano', '~> 3.7', '>= 3.7.1'
+  gem 'capistrano3-puma', '~> 1.2', '>= 1.2.1'
+  gem 'capistrano-rails', '~> 1.2', '>= 1.2.2', require: false
+  gem 'capistrano-bundler', '~> 1.2', require: false
+  gem 'capistrano-rvm', '~> 0.1.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
