@@ -1,0 +1,5 @@
+= form_tag searches_path, method: 'get', class: 'form-horizontal' do
+  = text_field_tag :search, nil, class: 'form-control form-search', autocomplete: true, placeholder: "Find Article"
+  = button_tag(type: 'submit', name: nil, class: 'btn btn-primary pull-right') do
+    Search
+    = icon('search')
